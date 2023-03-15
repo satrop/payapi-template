@@ -1,0 +1,92 @@
+@use '../globals/breaks' as b;
+
+footer {
+    padding-top: 2.5rem;
+    padding-bottom: 3.438rem;
+
+    @include b.breakpoint(md) {
+        padding-block: 3.438rem;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+
+        @include b.breakpoint(md) {
+            flex-direction: row;
+            align-items: center;
+        }
+    }
+
+    .nav--footer {
+        ul {
+            --flow: 1.875rem;
+
+            @include b.breakpoint(md) {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                --flow: 0;
+                gap: 3rem;
+            }
+
+            li {
+                text-align: center;
+
+                img {
+                    margin-inline: auto;
+                }
+
+                &:first-of-type {
+                    span {
+                        display: none;
+                    }
+                }
+
+                &:last-of-type {
+                    display: none;
+                }
+
+                a {
+                    color: var(--clr-s-200);
+
+                    &:hover {
+                        color: #fff;
+                    }
+
+                    img {
+                        filter: brightness(100);
+                    }
+                }
+            }
+        }
+    }
+
+    ul.social-links {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        margin-top: 2.5rem;
+
+        @include b.breakpoint(md) {
+            margin-top: 0;
+            margin-left: auto;
+        }
+
+        a {
+            svg {
+                fill: #fff;
+                width: 24px;
+                height: 24px;
+                transition: fill var(--trans-dur);
+            }
+
+            &:hover {
+                svg {
+                    fill: var(--clr-p-100);
+                }
+            }
+        }
+    }
+
+}
