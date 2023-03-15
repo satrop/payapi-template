@@ -1,0 +1,14 @@
+<a class="skip" href="#main">Skip Navigation Links</a>
+
+<script>
+	const skip = document.querySelector('.skip');
+	const nav = document.querySelector('.nav--desktop');
+
+	skip.addEventListener('focus', () => {
+		nav.classList.toggle('focused');
+	});
+
+	skip.addEventListener('blur', () => {
+		nav.classList.toggle('focused');
+	});
+</script>

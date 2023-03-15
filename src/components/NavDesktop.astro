@@ -1,0 +1,23 @@
+---
+import data from '~data/navLinks.json';
+---
+
+<nav class="nav--desktop">
+	<div class="container">
+		<ul class="nav--desktop-ul" role="menu">
+			{
+				data.map((item) => (
+					<li role="presentation">
+						<a
+							class={item.className}
+							role="menuitem"
+							href={item.link}>
+							<span>{item.title}</span>
+							{item.logo ? <img src={item.logo} alt="" /> : null}
+						</a>
+					</li>
+				))
+			}
+		</ul>
+	</div>
+</nav>

@@ -2,7 +2,8 @@
 	{
 		"link": "/",
 		"className": "nav-link",
-		"title": "Home"
+		"title": "Home",
+		"logo": "/logo.svg"
 	},
 	{
 		"link": "/pricing",
@@ -21,7 +22,7 @@
 	},
 	{
 		"link": "/demo",
-		"className": "nav-link button background-color-pink",
+		"className": "nav-link button background-color-pink box-shadow",
 		"title": "Schedule a Demo"
 	}
 ]

@@ -9,6 +9,7 @@ body {
     -webkit-font-smoothing: antialiased;
     background-color: var(--clr-n-100);
     position: relative;
+    color: var(--clr-s-100);
 }
 
 .container {
@@ -17,5 +18,44 @@ body {
 
     @include b.breakpoint(md) {
         width: min(89.71%, 69.375rem);
+    }
+}
+
+main {
+    a {
+        text-decoration: none;
+        font-weight: 700;
+        color: var(--clr-s-100);
+        position: relative;
+        overflow: hidden;
+        transition: all var(--trans-dur);
+        
+        &::after {
+            transition: all var(--trans-dur);
+            position: absolute;
+            content: '';
+            width: calc(100% + 6px);
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            height: 0;
+            opacity: 0;
+            background-color: var(--clr-p-100);
+            z-index: -1;
+        }
+
+        &:focus-visible {
+            outline: none;
+            color: #fff;
+
+            &::after {
+                opacity: 1;
+                height: 17px;
+            }
+        }
+
+        &:hover {
+            color: var(--clr-p-100);
+        }
     }
 }

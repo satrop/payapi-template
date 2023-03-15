@@ -1,12 +1,19 @@
 .skip {
     position: absolute;
     margin-top: -100%;
-    margin-inline: auto;
-    left: 0;
-    right: 0;
     transition: margin-top var(--trans-dur);
+    left: 50%;
+    transform: translateX(-50%);
+    text-decoration: none;
+    font-weight: 700;
+    color: var(--clr-s-100);
+    outline-offset: 5px;
+    outline: 5px solid;
+    border-radius: 100rem;
+    padding-inline: 2rem;
+    background-color: var(--clr-n-100);
 
-    &:focus {
-        margin-top: 200px;
+    &:focus-visible {
+        margin-top: 50px;
     }
 }
