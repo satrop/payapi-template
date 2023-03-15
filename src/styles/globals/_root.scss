@@ -1,0 +1,20 @@
+:root {
+    // Site Colors
+    --clr-p-100: hsl(337, 48%, 49%); // Dark Pink | #ba4270
+    --clr-p-200: hsl(220, 60%, 99%); // White | #fbfcfe
+
+    --clr-s-100: hsl(207, 33%, 32%); // Blue | #36536b
+    --clr-s-200: hsl(207, 16%, 50%); // Light Blue | #6c8295
+    --clr-s-300: hsl(207, 27%, 15%); // Dark Blue | #1b262f
+    --clr-s-400: hsl(337, 60%, 64%); // Light Pink | #da6d97
+
+    --clr-n-100: hsl(209, 46%, 95%); // Background | #EDF3F8
+
+    // Fonts
+    --ff-400: 'Public Sans', sans-serif;
+    --ff-500: 'DM Serif Display', serif;
+
+    // Animation
+    --trans-dur: .3s ease-in-out;
+
+}

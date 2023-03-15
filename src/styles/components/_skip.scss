@@ -1,0 +1,12 @@
+.skip {
+    position: absolute;
+    margin-top: -100%;
+    margin-inline: auto;
+    left: 0;
+    right: 0;
+    transition: margin-top var(--trans-dur);
+
+    &:focus {
+        margin-top: 200px;
+    }
+}

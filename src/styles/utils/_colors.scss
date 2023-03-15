@@ -1,0 +1,21 @@
+.text-color {
+    &-white {
+        color: #fff;
+    }
+
+    &-pink {
+        color: var(--clr-p-100);
+    }
+}
+
+.background-color {
+    &-dark-blue {
+        background-color: var(--clr-s-300);
+        color: #fff;
+    }
+
+    &-pink {
+        background-color: var(--clr-p-100);
+        color: #fff;
+    }
+}

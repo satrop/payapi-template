@@ -1,0 +1,6 @@
+@use "sass:math";
+
+@function lh($lineHeight, $fontSize) {
+    $unitLess: math.div($lineHeight, $fontSize);
+    @return $unitLess
+}

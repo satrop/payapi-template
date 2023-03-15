@@ -1,0 +1,21 @@
+@use './breaks' as b;
+
+body {
+    overflow-x: hidden;
+    line-height: 1.625rem;
+    font-family: var(--ff-400);
+    font-size: 1rem;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    background-color: var(--clr-n-100);
+    position: relative;
+}
+
+.container {
+    width: min(87.2%, 50rem);
+    margin-inline: auto;
+
+    @include b.breakpoint(md) {
+        width: min(89.71%, 69.375rem);
+    }
+}

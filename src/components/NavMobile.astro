@@ -1,0 +1,44 @@
+---
+import data from '~data/navLinks.json';
+---
+
+<nav class="nav--mobile">
+	<a href="/" aria-label="Logo link">
+		<img src="/logo.svg" alt="PayAPI Logo" />
+	</a>
+	<button class="menu-button" aria-expanded="false" aria-controls="menu-list">
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+	</button>
+	<ul id="menu-list" role="menu" hidden>
+		{
+			data.map((item) => (
+				<li role="presentation">
+					<a class={item.className} role="menuitem" href={item.link}>
+						{item.title}
+					</a>
+				</li>
+			))
+		}
+	</ul>
+</nav>
+
+<script>
+	const navLinks = document.querySelectorAll('.nav-link');
+
+	navLinks.forEach((link) => {
+		if (link.getAttribute('href') === window.location.pathname) {
+			link.setAttribute('aria-current', 'page');
+		}
+	});
+
+	var navButton = document.querySelector('nav button');
+	navButton.addEventListener('click', function () {
+		let expanded = this.getAttribute('aria-expanded') === 'true' || false;
+		this.setAttribute('aria-expanded', !expanded);
+		let menu = this.nextElementSibling;
+		menu.hidden = !menu.hidden;
+	});
+</script>

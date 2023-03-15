@@ -1,0 +1,27 @@
+[
+	{
+		"link": "/",
+		"className": "nav-link",
+		"title": "Home"
+	},
+	{
+		"link": "/pricing",
+		"className": "nav-link",
+		"title": "Pricing"
+	},
+	{
+		"link": "/about",
+		"className": "nav-link",
+		"title": "About"
+	},
+	{
+		"link": "/contact",
+		"className": "nav-link",
+		"title": "Contact"
+	},
+	{
+		"link": "/demo",
+		"className": "nav-link button background-color-pink",
+		"title": "Schedule a Demo"
+	}
+]

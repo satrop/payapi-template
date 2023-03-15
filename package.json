@@ -1,15 +1,21 @@
 {
-  "name": "",
-  "type": "module",
-  "version": "0.0.1",
-  "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro"
-  },
-  "dependencies": {
-    "astro": "^2.0.18"
-  }
+	"name": "pay-api",
+	"type": "module",
+	"version": "0.0.1",
+	"scripts": {
+		"dev": "astro dev",
+		"start": "astro dev",
+		"build": "astro build",
+		"preview": "astro preview",
+		"astro": "astro"
+	},
+	"dependencies": {
+		"astro": "^2.0.18"
+	},
+	"devDependencies": {
+		"sass": "^1.59.2",
+		"stylelint": "^15.2.0",
+		"stylelint-config-recommended-scss": "^9.0.1",
+		"stylelint-config-standard": "^30.0.1"
+	}
 }
