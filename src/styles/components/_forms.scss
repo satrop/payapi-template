@@ -1,0 +1,64 @@
+@use '../globals/breaks' as b;
+
+.form--email {
+    --flow: 1.5rem;
+
+    h1 {
+        text-align: center;
+    }
+
+    button {
+        width: 100%;
+        box-shadow: 10px 10px 25px -10px rgba(54, 83, 107, 0.25);
+        padding: .65625rem 1.4rem;
+    }
+
+    @include b.breakpoint(md) {
+        --flow: 3rem;
+
+        .group {
+            display: grid;
+            grid-template-areas: "stack";
+            max-width: 445px;
+            margin-inline: auto;
+
+            >* {
+                grid-area: stack;
+            }
+
+            button {
+                margin-top: 0;
+                width: auto;
+                margin-left: auto;
+            }
+        }
+    }
+}
+
+.form-element {
+    display: grid;
+
+    input {
+        border: 0;
+        border-radius: 100rem;
+        font-weight: 700;
+        padding: .65625rem 1.4rem;
+        transition: all var(--trans-dur);
+        cursor: pointer;
+        box-shadow: 10px 10px 25px -10px rgba(54, 83, 107, 0.25);
+
+        &:focus-visible {
+            outline-offset: 5px;
+            outline: 5px solid;
+            outline-color: var(--clr-p-100);
+        }
+
+        @include b.breakpoint(md) {
+            padding-right: 35%;
+        }
+
+        @include b.breakpoint(lg) {
+            padding-right: 41%;
+        }
+    }
+}

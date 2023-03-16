@@ -1,0 +1,76 @@
+@use '../globals/breaks' as b;
+
+header {
+    --flow: 1.5rem;
+
+    .img-shadow {
+        width: 128px;
+        margin-inline: auto;
+        position: relative;
+
+        img {
+            width: 100%;
+        }
+
+        &::after {
+            position: absolute;
+            width: calc(100% - 7px);
+            height: 100%;
+            top: 0;
+            left: 3px;
+            content: '';
+            border-radius: 17px;
+            box-shadow: 0px 2px 44px rgba(0, 0, 0, .35);
+        }
+
+        @include b.breakpoint(md) {
+            width: 159px;
+        }
+
+        @include b.breakpoint(lg) {
+            grid-area: image;
+            width: 253px;
+
+            &::after {
+                border-radius: 36px;
+            }
+        }
+    }
+
+    p {
+        text-align: center;
+    }
+
+    @include b.breakpoint(md) {
+        margin-inline: auto;
+        max-width: 35.813rem;
+    }
+
+    @include b.breakpoint(lg) {
+        display: grid;
+        max-width: unset;
+        align-items: center;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 'text image';
+
+        .col {
+            grid-area: text;
+        }
+
+        p,
+        .form--email h1 {
+            text-align: left;
+        }
+
+        p {
+            margin-top: 1rem;
+            margin-left: 1.4rem;
+        }
+
+        .form--email .group {
+            margin-inline: unset;
+        }
+    }
+
+}
+

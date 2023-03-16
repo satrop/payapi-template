@@ -1,0 +1,9 @@
+---
+export interface Props {
+	circleClass?: string;
+}
+
+const { circleClass } = Astro.props;
+---
+
+<div class:list={['circle', circleClass]}></div>

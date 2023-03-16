@@ -1,0 +1,67 @@
+@use '../globals/breaks' as b;
+
+.circle {
+    width: 48.75rem;
+    aspect-ratio: 1;
+    border-radius: 100%;
+    background-color: var(--clr-s-100);
+    opacity: 0.15;
+    position: absolute;
+    pointer-events: none;
+    top: -47.75rem;
+    right: -29.938rem;
+    z-index: -1;
+
+    @include b.breakpoint(md) {
+        top: -48.938rem;
+        right: -35.938rem;
+    }
+
+    @include b.breakpoint(lg) {
+        width: 48.75rem;
+        top: -40.438rem;
+        right: -8.75rem;
+    }
+
+    // Circle on home page
+    &.home {
+        top: -40.625rem;
+        left: 50%;
+        transform: translateX(-50%);
+        right: unset;
+
+        @include b.breakpoint(md) {
+            width: 59.375rem;
+            top: -50rem;
+        }
+
+        @include b.breakpoint(lg) {
+            width: 48.75rem;
+            top: -13.25rem;
+            right: -8.75rem;
+            left: unset;
+            transform: unset;
+        }
+    }
+
+    // Circle in the footer
+    &.footer {
+        left: 50%;
+        transform: translateX(-50%);
+        right: unset;
+        top: unset;
+        bottom: -36.25rem;
+        z-index: 0;
+
+        @include b.breakpoint(md) {
+            transform: unset;
+            bottom: -33.75rem;
+            right: -24.375rem;
+            left: unset;
+        }
+
+        @include b.breakpoint(lg) {
+            right: -20.625rem;
+        }
+    }
+}

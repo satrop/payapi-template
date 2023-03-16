@@ -10,6 +10,13 @@ body {
     background-color: var(--clr-n-100);
     position: relative;
     color: var(--clr-s-100);
+
+    &.grid {
+        display: grid;
+        min-height: 100vh;
+        min-height: 100dvh;
+        grid-template-rows: auto 1fr auto;
+    }
 }
 
 .container {
@@ -22,6 +29,21 @@ body {
 }
 
 main {
+    position: relative;
+    --flow: 5rem;
+
+    @include b.breakpoint(md) {
+        --flow: 6.25rem;
+    }
+
+    @include b.breakpoint(lg) {
+        --flow: 9.375rem;
+    }
+}
+
+main,
+footer {
+
     a {
         text-decoration: none;
         font-weight: 700;
@@ -29,7 +51,7 @@ main {
         position: relative;
         overflow: hidden;
         transition: all var(--trans-dur);
-        
+
         &::after {
             transition: all var(--trans-dur);
             position: absolute;
@@ -58,4 +80,5 @@ main {
             color: var(--clr-p-100);
         }
     }
+
 }

@@ -1,11 +1,24 @@
 ---
 import Layout from '~layouts/Layout.astro';
+import Circle from '~components/Circle.astro';
+import Form from '~components/Form.astro';
 
 import '~styles/styles.scss';
+import '~styles/pages/_home.scss';
 ---
 
-<Layout title="Welcome to Astro.">
-	<h1>Home</h1>
+<Layout title="Welcome to Astro." pageClass="home">
+	<Circle circleClass="home" />
+	<header class="flow">
+		<div class="img-shadow">
+			<img src="/home/desktop/illustration-phone-mockup.svg" alt="" />
+		</div>
+		<div class="col">
+			<Form title="Start building with our APIs for absolutely free." />
+			<p>
+				Have questions? <a href="/contact">Contact us</a>
+			</p>
+		</div>
+	</header>
+	<div></div>
 </Layout>
-
-<style></style>
