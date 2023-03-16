@@ -2,6 +2,7 @@
 import Layout from '~layouts/Layout.astro';
 import Circle from '~components/Circle.astro';
 import Form from '~components/Form.astro';
+import WhoWeWorkWith from '~components/WhoWeWorkWith.astro';
 
 import '~styles/styles.scss';
 import '~styles/pages/_home.scss';
@@ -9,7 +10,7 @@ import '~styles/pages/_home.scss';
 
 <Layout title="Welcome to Astro." pageClass="home">
 	<Circle circleClass="home" />
-	<header class="flow">
+	<header class="container flow">
 		<div class="img-shadow">
 			<img src="/home/desktop/illustration-phone-mockup.svg" alt="" />
 		</div>
@@ -20,5 +21,5 @@ import '~styles/pages/_home.scss';
 			</p>
 		</div>
 	</header>
-	<div></div>
+	<WhoWeWorkWith />
 </Layout>

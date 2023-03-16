@@ -65,3 +65,26 @@
         }
     }
 }
+
+section {
+    .circle {
+        z-index: 0;
+    }
+}
+
+.who-we-work-with {
+    .circle {
+        left: 50%;
+        transform: translateX(-50%);
+        right: unset;
+        top: -36.25rem;
+
+        @include b.breakpoint(lg) {
+            transform: unset;
+            bottom: unset;
+            top: -22rem;
+            left: -24.375rem;
+            right: unset;
+        }
+    }
+}

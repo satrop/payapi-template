@@ -12,10 +12,36 @@
     &-dark-blue {
         background-color: var(--clr-s-300);
         color: #fff;
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        .h1,
+        .h2,
+        .h3,
+        .h4,
+        .h5 {
+            color: #fff
+        }
     }
 
     &-pink {
         background-color: var(--clr-p-100);
         color: #fff;
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        .h1,
+        .h2,
+        .h3,
+        .h4,
+        .h5 {
+            color: #fff
+        }
     }
 }

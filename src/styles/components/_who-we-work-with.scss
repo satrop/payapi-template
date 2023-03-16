@@ -1,0 +1,88 @@
+@use '../globals/breaks' as b;
+
+.who-we-work-with--container {
+    position: relative;
+    padding-block: 5rem;
+    display: grid;
+    gap: 1rem;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+        'logos'
+        'text';
+
+    .logos {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+        align-items: center;
+
+        svg {
+            fill: #fff;
+            scale: .8;
+        }
+
+        @include b.breakpoint(md) {
+            grid-template-columns: repeat(3, 1fr);
+
+            svg {
+                scale: unset;
+            }
+        }
+    }
+
+    .col {
+        display: grid;
+        grid-area: text;
+        justify-items: center;
+        --flow: 1rem;
+
+        &.logos {
+            grid-area: logos;
+        }
+
+        &.text {
+            max-width: 457px;
+            margin-inline: auto;
+
+            h2 {
+                margin-bottom: 1rem;
+            }
+
+            @include b.breakpoint(lg) {
+                max-width: 445px;
+                margin-inline: unset;
+                justify-items: start;
+            }
+        }
+    }
+
+    h2,
+    p {
+        text-align: center;
+    }
+
+    .button {
+        display: inline-block;
+        margin-top: 3.375rem;
+    }
+
+    @include b.breakpoint(lg) {
+        grid-template-areas: 'text logos';
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        align-items: center;
+        padding-block: 6.25rem;
+        gap: 4rem;
+
+        h2,
+        p {
+            text-align: left;
+        }
+
+        .logos {
+            max-width: 33.5rem;
+
+            gap: 2.438rem;
+        }
+    }
+}

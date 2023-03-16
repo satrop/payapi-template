@@ -26,3 +26,20 @@
         opacity: 0.5;
     }
 }
+
+.background-color-dark-blue {
+    .button {
+        color: #fff;
+
+        &.outline {
+            border-color: #fff;
+            border: solid 1px;
+            opacity: 1;
+
+            &:hover {
+                background-color: #fff;
+                color: var(--clr-s-300)
+            }
+        }
+    }
+}

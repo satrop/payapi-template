@@ -1,0 +1,17 @@
+---
+export interface Props {
+	text: string;
+	classes?: string;
+	link: string;
+	isOutline?: boolean;
+}
+
+const { text, classes, link, isOutline = false, ...rest } = Astro.props;
+---
+
+<a
+	href={link}
+	class:list={['button', classes, { outline: isOutline }]}
+	{...rest}>
+	{text}
+</a>

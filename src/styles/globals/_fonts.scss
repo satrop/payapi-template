@@ -38,6 +38,7 @@ h1,
 h2,
 .h2 {
     font-size: clamp(2.25rem, 6vw, 3rem);
+    font-weight: 400;
     line-height: lh.lh(56, 48);
 }
 
