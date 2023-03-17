@@ -1,0 +1,28 @@
+---
+import LinkButton from './LinkButton.astro';
+
+export interface props {
+    title: string;
+    info: string;
+    price: string;
+    options: string;
+}
+
+const {title, info, price, options} = Astro.props;
+---
+
+<div class="price-item">
+	<div class="price-item__title text-color-pink h3">{title}</div>
+	<div class="price-item__info">{info}</div>
+	<div class="price-item__price h2">${price}</div>
+	<ul class:list={["price-item__options", options]}>
+		<li>Transactions</li>
+		<li>Auth</li>
+		<li>Identity</li>
+		<li>Investments</li>
+		<li>Assets</li>
+		<li>Liabilities</li>
+		<li>Income</li>
+	</ul>
+	<LinkButton link="#nogo" text="Request Access" isOutline={true} />
+</div>

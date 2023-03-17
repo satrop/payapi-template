@@ -1,13 +1,36 @@
 ---
 import Layout from '~layouts/Layout.astro';
 import Circle from '~components/Circle.astro';
+import Pricing from '~components/Pricing.astro';
 
 import '~styles/styles.scss';
 ---
 
 <Layout title="Pricing">
 	<Circle />
-	<h1>Pricing</h1>
+	<div class="page-header | container">
+		<h1>Pricing</h1>
+	</div>
+	<section class="container | pricing-block">
+		<Pricing
+			title="Free Plan"
+			info="Build and test using our core set of products with up to 100 API requests"
+			price="0.00"
+			options="_3"
+		/>
+		<Pricing
+			title="Basic Plan"
+			info="Launch your project with unlimited requests and no contractual minimums "
+			price="249.00"
+			options="_5"
+		/>
+		<Pricing
+			title="Premium Plan"
+			info="Get tailored solutions, volume pricing, and dedicated support for your team "
+			price="599.00"
+			options="_7"
+		/>
+	</section>
 </Layout>
 
 <style></style>
