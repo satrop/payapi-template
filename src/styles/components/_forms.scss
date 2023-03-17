@@ -3,7 +3,8 @@
 .form--email {
     --flow: 1.5rem;
 
-    h1 {
+    h1,
+    h2 {
         text-align: center;
     }
 
@@ -59,6 +60,29 @@
 
         @include b.breakpoint(lg) {
             padding-right: 41%;
+        }
+    }
+}
+
+.bottom-form {
+    padding-bottom: 7.5rem;
+
+    .form--email {
+        
+        @include b.breakpoint(lg) {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            
+            h2 {
+                text-align: left;
+            }
+
+            .group {
+                margin-inline: unset;
+                margin-top: unset;
+                justify-self: end;
+                width: 100%;
+            }
         }
     }
 }

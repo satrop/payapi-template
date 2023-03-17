@@ -3,13 +3,14 @@ import Button from '~components/Button.astro';
 
 export interface Props {
 	title: string;
+	bottom?: boolean;
 }
 
-const { title } = Astro.props;
+const { title, bottom = false } = Astro.props;
 ---
 
 <form action="#" class="form--email flow">
-	<h1>{title}</h1>
+	{bottom ? <h2>{title}</h2> : <h1>{title}</h1>}
 	<div class="group flow">
 		<div class="form-element">
 			<label for="email" class="hide">Enter email address</label>

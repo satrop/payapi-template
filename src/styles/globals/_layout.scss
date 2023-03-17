@@ -87,7 +87,8 @@ section {
     position: relative;
     overflow: hidden;
 
-    &.text-image-block {
+    &.text-image-block,
+    &.bottom-form {
         overflow: visible;
     }
 }
