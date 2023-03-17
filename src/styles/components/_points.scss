@@ -1,0 +1,46 @@
+@use '../globals/breaks' as b;
+
+.points {
+    display: grid;
+    gap: 3rem;
+
+    @include b.breakpoint(md) {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.625rem;
+    }
+
+    @include b.breakpoint(lg) {}
+}
+
+.point-card {
+    display: grid;
+    text-align: center;
+    justify-items: center;
+    align-items: center;
+
+    &__icon {
+        margin-bottom: 2rem;
+        width: 6.625rem;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        background-color: var(--clr-s-100);
+        display: grid;
+        place-items: center;
+
+        @include b.breakpoint(md) {
+            width: 5.5rem;
+        }
+
+        @include b.breakpoint(lg) {
+            width: 6.625rem;
+        }
+    }
+
+    &__title {
+        margin-bottom: 1rem;
+    }
+
+    &__text {
+        width: 95%;
+    }
+}
