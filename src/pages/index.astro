@@ -3,6 +3,7 @@ import Layout from '~layouts/Layout.astro';
 import Circle from '~components/Circle.astro';
 import Form from '~components/Form.astro';
 import WhoWeWorkWith from '~components/WhoWeWorkWith.astro';
+import TextImageBlock from '~components/TextImageBlock.astro';
 
 import '~styles/styles.scss';
 import '~styles/pages/_home.scss';
@@ -22,4 +23,19 @@ import '~styles/pages/_home.scss';
 		</div>
 	</header>
 	<WhoWeWorkWith />
+	<TextImageBlock
+		image="/home/desktop/illustration-easy-to-implement.svg"
+		altText="Demo image"
+		title="Easy to implement"
+		text="Our API comes with just a few lines of code. You'll be up and running in no time. We built our documentation page to integrate payments functionality with ease."
+	/>
+	<TextImageBlock
+		image="/home/desktop/illustration-simple-ui-1.svg"
+		image2="/home/desktop/illustration-simple-ui-2.svg"
+		altText="Demo image"
+		title="Simple UI & UX"
+		text="Our pre-built form is easy to integrate in your app or website’s checkout flow and designed to optimize conversion. "
+		flip={true}
+		secondImage={true}
+	/>
 </Layout>

@@ -1,0 +1,73 @@
+@use '../globals/breaks' as b;
+
+.text-image-block {
+    display: grid;
+    gap: 2rem;
+
+    .text {
+        text-align: center;
+
+        h2 {
+            margin-bottom: 1.5rem;
+        }
+
+        @include b.breakpoint(md) {
+            max-width: 35.813rem;
+            margin-inline: auto;
+        }
+
+        @include b.breakpoint(lg) {
+            text-align: left;
+        }
+    }
+
+
+    .image {
+        display: flex;
+        justify-content: center;
+        gap: 3rem;
+
+        .image-shadow {
+            position: relative;
+
+            &::after {
+                position: absolute;
+                width: calc(100% - 7px);
+                height: 100%;
+                top: 0;
+                left: 3px;
+                content: '';
+                border-radius: 17px;
+                box-shadow: 25px 25px 80px rgba(54, 83, 107, 0.300727);
+
+                @include b.breakpoint(md) {
+                    border-radius: 36px;
+                }
+
+                @include b.breakpoint(lg) {
+                    border-radius: 36px;
+                }
+            }
+        }
+    }
+
+    @include b.breakpoint(lg) {
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+
+        &.flip {
+            .col {
+                order: 2;
+
+                &:nth-child(2) {
+                    order: 1;
+                }
+            }
+        }
+
+        .text {
+            max-width: 27rem;
+        }
+    }
+
+}

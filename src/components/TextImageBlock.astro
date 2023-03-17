@@ -1,0 +1,44 @@
+---
+export interface props {
+	text: string;
+	title: string;
+	image: string;
+	image2: string;
+	altText: string;
+	flip?: boolean;
+	secondImage: boolean;
+}
+
+const {
+	text,
+	title,
+	image,
+	image2,
+	altText,
+	flip = false,
+	secondImage = false,
+} = Astro.props;
+---
+
+<section class:list={['text-image-block | container', { flip: flip }]}>
+	<div class="col image">
+		<div class="image-shadow">
+			<img src={image} alt={altText} />
+		</div>
+		{
+			secondImage ? (
+				<div class="image-shadow">
+					<img src={image2} alt={altText} />
+				</div>
+			) : null
+		}
+	</div>
+	<div class="col text">
+		<h2>
+			{title}
+		</h2>
+		<p>
+			{text}
+		</p>
+	</div>
+</section>
