@@ -1,0 +1,13 @@
+---
+export interface props {
+    title: string;
+    stat: string;
+}
+
+const { title, stat } = Astro.props
+---
+
+<div class="stat">
+	<div class="stat__title">{title}</div>
+	<div class="stat__stat text-color-pink h2">{stat}</div>
+</div>

@@ -1,0 +1,26 @@
+@use '../globals/breaks' as b;
+
+.content-block {
+    display: grid;
+    gap: 1rem;
+    text-align: center;
+
+    +.content-block {
+        margin-top: 2.875rem;
+    }
+
+    @include b.breakpoint(md) {
+        grid-template-columns: 13.938rem 1fr;
+        text-align: left;
+
+        +.content-block {
+            margin-top: 2.4rem;
+        }
+    }
+
+    @include b.breakpoint(lg) {
+        +.content-block {
+            margin-top: 3.5rem;
+        }
+    }
+}

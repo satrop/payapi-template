@@ -1,0 +1,70 @@
+@use '../globals/breaks' as b;
+
+.stats {
+    display: grid;
+
+    @include b.breakpoint(md) {
+        gap: 1rem;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.stat {
+    overflow: hidden;
+    position: relative;
+    padding-block: 1rem;
+    text-align: center;
+
+    &::before,
+    &::after {
+        position: absolute;
+        content: '';
+        width: 200em;
+        height: 1px;
+        left: -100em;
+        background-color: rgba(#36536b, .25);
+    }
+
+    &::before {
+        top: 0;
+    }
+
+    &::after {
+        bottom: 0;
+    }
+
+    &:nth-child(1) {
+
+        &::after {
+            display: none;
+        }
+    }
+
+    &:nth-child(3) {
+
+        &::before {
+            display: none;
+        }
+    }
+
+    &:nth-child(2) {
+
+        &::before,
+        &::after {
+            display: none;
+        }
+    }
+
+    @include b.breakpoint(md) {
+
+        &:nth-child(1),
+        &:nth-child(2),
+        &:nth-child(3) {
+
+            &::before,
+            &::after {
+                display: block;
+            }
+        }
+    }
+}

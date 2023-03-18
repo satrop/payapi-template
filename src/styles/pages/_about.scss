@@ -1,0 +1,9 @@
+@use '../globals/breaks' as b;
+
+.about {
+    @include b.breakpoint(lg) {
+        .container.content-block {
+            width: min(87.2%, 57.5rem);
+        }
+    }
+}
