@@ -1,0 +1,38 @@
+@use '../globals/breaks' as b;
+
+
+
+h4 {
+    opacity: 0.75;
+    text-align: center;
+    max-width: 70%;
+    margin-inline: auto;
+
+    @include b.breakpoint(xl) {
+        text-align: left;
+        width: 100%;
+        margin: unset;
+    }
+}
+
+.logos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    gap: 2.438rem;
+    margin-top: 2rem; 
+
+    svg {
+        fill: var(--clr-s-100);
+        scale: .8;
+    }
+
+    @include b.breakpoint(md) {
+        grid-template-columns: repeat(3, 1fr);
+
+        svg {
+            scale: unset;
+        }
+    }
+}

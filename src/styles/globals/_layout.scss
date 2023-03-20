@@ -95,9 +95,39 @@ section {
 
 .page-header {
     --flow: 1rem;
+
+    @include b.breakpoint(md) {
+        max-width: 35.813rem;
+    }
+
+     @include b.breakpoint(lg) {
+        max-width: unset;
+     }
 }
 
 ::selection {
     background: var(--clr-p-100);
     color: #fff;
+}
+
+.two-col {
+
+    @include b.breakpoint(lg) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 7.75rem;
+        align-items: center;
+    }
+
+}
+
+.two-col-contact {
+
+    @include b.breakpoint(xl) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 7.75rem;
+        align-items: center;
+    }
+
 }

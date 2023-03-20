@@ -11,7 +11,6 @@
     button {
         width: 100%;
         box-shadow: 10px 10px 25px -10px rgba(54, 83, 107, 0.25);
-        padding: .65625rem 1.4rem;
     }
 
     @include b.breakpoint(md) {
@@ -43,7 +42,7 @@
         border: 0;
         border-radius: 100rem;
         font-weight: 700;
-        padding: .65625rem 1.4rem;
+        padding: .65rem 1.4rem;
         transition: all var(--trans-dur);
         cursor: pointer;
         box-shadow: 10px 10px 25px -10px rgba(54, 83, 107, 0.25);
