@@ -4,7 +4,6 @@ import Circle from '~components/Circle.astro';
 import ContentBlock from '~components/ContentBlock.astro';
 import Stats from '~components/Stats.astro';
 
-import '~styles/styles.scss';
 import '~styles/pages/_about.scss';
 ---
 
@@ -40,18 +39,9 @@ import '~styles/pages/_about.scss';
 		</picture>
 	</section>
 	<section class="stats | container">
-		<Stats 
-			title="Team Members"
-			stat="300+"
-		/>
-		<Stats 
-			title="Offices in the US"
-			stat="3"
-		/>
-		<Stats 
-			title="Transactions analyzed"
-			stat="10M+"
-		/>
+		<Stats title="Team Members" stat="300+" />
+		<Stats title="Offices in the US" stat="3" />
+		<Stats title="Transactions analyzed" stat="10M+" />
 	</section>
 	<div>
 		<ContentBlock
@@ -64,5 +54,3 @@ import '~styles/pages/_about.scss';
 		/>
 	</div>
 </Layout>
-
-<style></style>

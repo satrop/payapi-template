@@ -45,6 +45,7 @@
 
         li {
             margin-bottom: 2rem;
+            list-style: none;
 
             &:first-of-type {
                 display: none;
@@ -60,10 +61,11 @@
                 opacity: 0.7;
                 font-weight: 700;
                 font-size: 1.25rem;
-                line-height: lh.lh(1.25, 24);
 
                 &.button {
                     opacity: 1;
+                    padding: .65rem 2rem;
+
                 }
             }
         }

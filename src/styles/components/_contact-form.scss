@@ -46,6 +46,8 @@
 
     .button {
         background-color: transparent;
+        border-color: var(--clr-s-100);
+        color: var(--clr-s-100);
     }
 
     @include b.breakpoint(md) {}
@@ -83,11 +85,11 @@
         }
 
         &::before {
-            transform: translate(8px, 14px) rotate(-45deg);
+            transform: translate(6px, 11px) rotate(-45deg);
         }
 
         &::after {
-            transform: translate(5px, 11px) rotate(45deg);
+            transform: translate(3px, 8px) rotate(45deg);
 
         }
 

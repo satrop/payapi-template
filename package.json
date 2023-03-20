@@ -17,5 +17,8 @@
 		"stylelint": "^15.2.0",
 		"stylelint-config-recommended-scss": "^9.0.1",
 		"stylelint-config-standard": "^30.0.1"
+	},
+	"server": {
+		"host": true
 	}
 }
