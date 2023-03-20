@@ -96,3 +96,8 @@ section {
 .page-header {
     --flow: 1rem;
 }
+
+::selection {
+    background: var(--clr-p-100);
+    color: #fff;
+}
